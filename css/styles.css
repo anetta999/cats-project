@@ -1,0 +1,135 @@
+:root {
+  --footer-bg-color: #0f3f3c;
+  --accent-color: #f07f2e;
+  --basic-text-color: #2c2c2c;
+  --secondary-text-color: #ffffff;
+  --section-title-color: #2c2c2c;
+  --main-title-color: #ffffff;
+  --transition: 250ms ease-in;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+}
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  outline: 1px solid tomato;
+}
+.section {
+  margin-top: 60px;
+}
+.section-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.67;
+  color: var(--section-title-color);
+}
+.section-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/**--------HEADER--------  */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.67;
+  color: var(--accent-color);
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.nav-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--basic-text-color);
+
+  transition: color var(--transition);
+}
+.nav-link:is(:hover, :focus) {
+  color: var(--accent-color);
+}
+/**-------СATS---------  */
+
+.cats .section-title {
+  margin-bottom: 40px;
+}
+.cats-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.cats-item {
+  width: calc((100% - 40px * 2) / 3);
+}
+
+.cats-title {
+  margin-bottom: 8px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: var(--section-title-color);
+}
+.cats-text {
+  color: var(--basic-text-color);
+}
+.card-footer {
+  padding: 16px 8px 24px 8px;
+}
+.cats-link {
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+
+  transition: box-shadow var(--transition);
+}
+.cats-link:is(:hover, :focus) {
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+}
+/**--------GALLERY---------  */
+.gallery .section-title {
+  margin-bottom: 8px;
+}
+.gallery .section-text {
+  margin-bottom: 40px;
+}
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.gallery-list-item {
+  width: calc((100% - 16px * 5) / 6);
+  border-radius: 16px;
+  overflow: hidden;
+
+  transition: drop-shadow var(--transition);
+}
+.gallery-list-item:is(:hover, :focus) {
+  filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.25));
+}
